@@ -12,7 +12,6 @@ const projects = [
         type: "Two-Storey Residential",
         location: "Dasmariñas City, Cavite",
         specs: "170 sqm Corner Lot",
-        year: "2024",
         img: "/project-1.png",
         description: "This project is a modern, four-bedroom home designed for a newlywed couple starting their journey together. The goal was to create a comfortable, minimalist space that fits a limited budget while making the most of an inherited 170 sqm corner lot. The design focuses on spatial efficiency, maximizing the available floor area to create an open and flexible interior. The layout is built for the future, providing enough rooms for a growing family and a dedicated space for household help. By using simple lines and a practical floor plan, the residence proves that a high-quality, beautiful home can be achieved through smart and straightforward design.",
         gallery: ["/project-1.png", "/project-1-2.png"]
@@ -24,7 +23,6 @@ const projects = [
         type: "Residential Landscape Design",
         location: "Manila, Philippines",
         specs: "3,072 sqm Estate",
-        year: "2023",
         img: "/project-2.png",
         description: "This landscape design creates a smooth transition between a modern, geometric home and the lush Philippine outdoors. Designed for a Fil-Am couple, the project transforms a large 3,072 sqm property into a private and relaxing retreat. The goal was to balance clean, modern structures with the natural beauty of tropical plants. The yard is divided into functional zones, featuring a rectangular swimming pool for a modern look and a natural koi pond for a target atmosphere. Large wooden decks connect the house to the outdoors, providing plenty of shaded space to lounge under mature palms. By using a mix of flowering trees and greenery, the design offers a cool, functional sanctuary that is perfectly suited for the tropical climate.",
         gallery: ["/project-2.png", "/project-2-2.png", "/project-2-3.png"]
@@ -36,7 +34,6 @@ const projects = [
         type: "3-Storey Mixed-Use Building",
         location: "Almanza Dos, Las Piñas City",
         specs: "300 sqm Corner Lot",
-        year: "2024",
         img: "/project-3.png",
         description: "This project is a 3-storey modern building designed to support the growing commercial needs of Almanza Dos. Located on a high-visibility corner lot, the design aims to attract diverse tenants by offering a sleek, professional environment that stands out in the neighborhood. The building features a double-skin facade, specifically designed to shield the interior from direct sunlight and reduce heat, while maintaining a striking modern aesthetic. To ensure the building is future-proof, the leasable areas use an open-plan layout. This provides maximum flexibility, allowing tenants to easily customize and divide the space according to their specific business requirements. By combining ground-floor retail with versatile upper-level spaces, the design creates a functional and profitable hub for the local community.",
         gallery: ["/project-3.png", "/project-3-2.png", "/project-3-3.png"]
@@ -48,7 +45,6 @@ const projects = [
         type: "Mixed-Use Development (Class A Office & 4-Star Hotel)",
         location: "High Street, Bonifacio Global City (BGC)",
         specs: "High-Performance Mixed-Use",
-        year: "2023",
         img: "/project-4.png",
         description: "Vireo is a premier mixed-use landmark designed to meet the modern shift toward 'Bleisure'—the blend of professional business and personal leisure. Located in the heart of BGC, the project combines high-end office spaces with a 4-star hotel to create a high-performance environment that also prioritizes wellness. The design is centered on biophilic principles, which aim to reconnect people with nature to improve health and productivity. This is achieved through lush green walls and integrated greenery that soften the urban experience. A key architectural feature is the sawtooth facade, designed to act as a natural sunshade. By angling the windows, the building reduces heat from the sun while providing occupants with framed views of the vertical gardens. The result is a sustainable, iconic tower where professional success and personal well-being flourish together.",
         gallery: ["/project-4.png", "/project-4-2.png"]
@@ -60,7 +56,6 @@ const projects = [
         type: "Retail Strip Mall & Commercial Annex",
         location: "Atelier District | Pampanga, Philippines",
         specs: "Provincial Retail Landmark",
-        year: "2022",
         img: "/project-5.png",
         description: "Prisma Walk is a vibrant retail landmark designed to serve as a gateway feature within the Atelier District. The architecture is deeply inspired by Pampanga's iconic parol (lantern) industry, translating the craft's energy into a rhythmic and colorful building design. By using a provincial color palette and distinctive geometric shapes, the mall stands out as a celebration of local culture and modern commerce. The development consists of a main commercial building and a retail annex, known as the Arcade Mall, which work together to create a cohesive shopping experience. Beyond its aesthetic appeal, the design focuses on visibility and flow, ensuring that it attracts visitors while providing a functional, high-energy environment for local businesses and global brands alike.",
         gallery: ["/project-5.png", "/project-5-2.png"]
@@ -72,7 +67,6 @@ const projects = [
         type: "Mixed-Use Development (Residential, Office, and Retail)",
         location: "Intersection of JASA and NLEX | Pampanga, Philippines",
         specs: "Walkable, Self-Sustaining Community",
-        year: "2024",
         img: "/project-6.png",
         description: "Atelier District is a premier mixed-use development designed to serve as a symbolic gateway to Pampanga. Inspired by the province's world-class craftsmanship, the project blends local artistry with modern architectural identity. It is envisioned as a walkable, self-sustaining community that integrates residential condominiums, office towers, and a curated strip mall. The design is also a solution-driven response to the site's specific environmental challenges. To ensure stability on sloping terrain and soft soil, the project utilizes pile-raft foundations and structural fill. To manage flood risks and noise from the busy NLEX and JASA intersection, the masterplan incorporates elevated levels, bioswales, and landscaped buffers. By combining cultural pride with technical resilience, Atelier District provides a secure, sustainable, and elevated quality of life for its residents and tenants.",
         gallery: ["/project-6.png", "/project-6-2.png"]
@@ -162,7 +156,7 @@ const PortfolioContent = () => {
                                     <img src={project.img} alt={project.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
                                     <div className="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                         <h3 className="text-white text-2xl font-bold">{project.title}</h3>
-                                        <p className="text-white/80 uppercase tracking-widest text-sm mt-2">{project.type} • {project.year}</p>
+                                        <p className="text-white/80 uppercase tracking-widest text-sm mt-2">{project.type}</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -341,7 +335,7 @@ const PortfolioContent = () => {
 
             <footer className="py-12 sm:py-16 border-t border-gray-100 bg-white">
                 <div className="container flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8">
-                    <p className="text-gray-500 text-sm sm:text-base text-center md:text-left">© 2026 Jamie Rose P. Ardiente. All rights reserved.</p>
+                    <p className="text-gray-500 text-sm sm:text-base text-center md:text-left">© Jamie Rose P. Ardiente. All rights reserved.</p>
                     <div className="social-links flex flex-wrap justify-center gap-6 sm:gap-8">
                         <a href="https://www.linkedin.com/in/jamie-ardiente/" target="_blank" className="text-[var(--primary-color)] text-sm sm:text-base font-bold hover:text-[var(--accent-color)]">LinkedIn</a>
                         <a href="https://heyzine.com/flip-book/05e9a6b374.html" target="_blank" className="text-[var(--primary-color)] text-sm sm:text-base font-bold hover:text-[var(--accent-color)]">Magazine Portfolio</a>

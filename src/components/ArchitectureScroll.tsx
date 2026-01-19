@@ -163,7 +163,7 @@ const ArchitectureScroll = () => {
                 <div className="mt-6 sm:mt-8 flex items-center gap-2 sm:gap-4 py-2 px-4 sm:px-6 bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-lg max-w-[90vw]">
                     <div className="h-[1px] w-6 sm:w-12 bg-[#1a365d]/40" />
                     <p className="font-sans text-[8px] sm:text-[10px] md:text-sm tracking-[0.2em] sm:tracking-[0.4em] text-[#1a365d] font-bold uppercase truncate">
-                        JAMIE ROSE P. ARDIENTE — 2021-2025
+                        JAMIE ROSE P. ARDIENTE
                     </p>
                     <div className="h-[1px] w-6 sm:w-12 bg-[#1a365d]/40" />
                 </div>
