@@ -108,11 +108,11 @@ const PortfolioContent = () => {
     return (
         <>
             {/* Services Section */}
-            <section id="services" className="services py-24 bg-white">
+            <section id="services" className="services py-16 md:py-24 bg-white">
                 <div className="container">
-                    <div className="section-header">
-                        <h2 className="text-4xl font-bold mb-4">Design & Technical Capabilities</h2>
-                        <p className="text-gray-500">Providing specialized architectural solutions for modern needs.</p>
+                    <div className="section-header mb-12 sm:mb-16">
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-4">Design & Technical Capabilities</h2>
+                        <p className="text-gray-500 text-sm sm:text-base">Providing specialized architectural solutions for modern needs.</p>
                     </div>
                     <div className="services-grid">
                         {services.map((service) => (
@@ -127,16 +127,16 @@ const PortfolioContent = () => {
             </section>
 
             {/* Projects Section */}
-            <section id="projects" className="projects py-24">
+            <section id="projects" className="projects py-16 md:py-24">
                 <div className="container">
-                    <div className="section-header">
-                        <h2 className="text-4xl font-bold mb-4">Selected Works</h2>
-                        <div className="filter-btns mt-8 flex justify-center gap-4">
+                    <div className="section-header mb-12 sm:mb-16">
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-4">Selected Works</h2>
+                        <div className="filter-btns mt-6 sm:mt-8 flex flex-wrap justify-center gap-2 sm:gap-4">
                             {["all", "residential", "commercial"].map((f) => (
                                 <button
                                     key={f}
                                     onClick={() => setFilter(f)}
-                                    className={`px-6 py-2 rounded-full border border-gray-200 font-medium transition-all ${filter === f ? "bg-[var(--primary-color)] text-white border-[var(--primary-color)]" : "bg-transparent text-gray-600 hover:border-[var(--primary-color)]"
+                                    className={`px-4 sm:px-6 py-1.5 sm:py-2 rounded-full border border-gray-200 text-xs sm:text-sm font-medium transition-all ${filter === f ? "bg-[var(--primary-color)] text-white border-[var(--primary-color)]" : "bg-transparent text-gray-600 hover:border-[var(--primary-color)]"
                                         }`}
                                 >
                                     {f.charAt(0).toUpperCase() + f.slice(1)} {f !== "all" ? "" : "Projects"}
@@ -144,7 +144,7 @@ const PortfolioContent = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="projects-grid mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="projects-grid mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                         {filteredProjects.map((project) => (
                             <motion.div
                                 layout
@@ -275,23 +275,23 @@ const PortfolioContent = () => {
             </AnimatePresence>
 
             {/* About Section */}
-            <section id="about" className="about py-32 bg-gray-50 border-y border-gray-100">
-                <div className="container about-wrapper grid md:grid-cols-[1fr,1.2fr] gap-16 items-center">
+            <section id="about" className="about py-20 sm:py-32 bg-gray-50 border-y border-gray-100">
+                <div className="container about-wrapper grid md:grid-cols-[1fr,1.2fr] gap-10 sm:gap-16 items-center">
                     <div className="about-image relative">
                         <img
                             src="profile-pic.jpg"
                             alt="Jamie Rose P. Ardiente"
-                            className="rounded-lg shadow-[20px_20px_0_var(--primary-color)] w-full"
+                            className="rounded-lg shadow-[10px_10px_0_var(--primary-color)] sm:shadow-[20px_20px_0_var(--primary-color)] w-full max-w-[400px] mx-auto md:max-w-none"
                         />
                     </div>
-                    <div className="about-text">
-                        <h2 className="text-4xl font-bold mb-8 text-[var(--primary-color)]">About Jamie Rose P. Ardiente</h2>
-                        <p className="text-gray-600 text-lg mb-6">Current architecture student with a passion for sustainable design and structural honesty. I specialize in drafting detailed construction drawings and technical documentation that bridge the gap between concept and creation.</p>
-                        <p className="text-gray-600 text-lg mb-10">My workflow is powered by industry-standard tools including <strong>AutoCAD</strong>, <strong>Revit</strong>, and <strong>D5 Render</strong>, ensuring every project is delivered with technical precision and visual excellence.</p>
-                        <div className="about-stats flex gap-16">
-                            <div className="stat">
-                                <span className="stat-num text-5xl font-bold text-[var(--primary-color)]">40+</span>
-                                <span className="stat-label uppercase tracking-widest text-sm text-[var(--accent-color)] font-bold">Projects</span>
+                    <div className="about-text text-center md:text-left">
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-[var(--primary-color)]">About Jamie Rose P. Ardiente</h2>
+                        <p className="text-gray-600 text-base sm:text-lg mb-4 sm:mb-6">Current architecture student with a passion for sustainable design and structural honesty. I specialize in drafting detailed construction drawings and technical documentation that bridge the gap between concept and creation.</p>
+                        <p className="text-gray-600 text-base sm:text-lg mb-8 sm:mb-10">My workflow is powered by industry-standard tools including <strong>AutoCAD</strong>, <strong>Revit</strong>, and <strong>D5 Render</strong>, ensuring every project is delivered with technical precision and visual excellence.</p>
+                        <div className="about-stats flex justify-center md:justify-start gap-12 sm:gap-16">
+                            <div className="stat text-center md:text-left">
+                                <span className="stat-num text-4xl sm:text-5xl font-bold text-[var(--primary-color)]">40+</span>
+                                <span className="stat-label block uppercase tracking-widest text-[10px] sm:text-sm text-[var(--accent-color)] font-bold">Projects</span>
                             </div>
                         </div>
                     </div>
@@ -299,13 +299,13 @@ const PortfolioContent = () => {
             </section>
 
             {/* Contact Section */}
-            <section id="contact" className="contact py-32">
+            <section id="contact" className="contact py-20 sm:py-32">
                 <div className="container">
-                    <div className="section-header">
-                        <h2 className="text-4xl font-bold mb-4 text-[var(--primary-color)]">Let's Work Together</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">Ready to bring your architectural vision to life? Let's discuss how we can work together.</p>
+                    <div className="section-header mb-12 sm:mb-16">
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-[var(--primary-color)]">Let's Work Together</h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">Ready to bring your architectural vision to life? Let's discuss how we can work together.</p>
                     </div>
-                    <div className="contact-grid mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
+                    <div className="contact-grid mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16 sm:mb-24">
                         {[
                             { icon: Mail, label: "Email", sub: "Send me an email anytime", value: "ardiente.jamierose@gmail.com", href: "mailto:ardiente.jamierose@gmail.com" },
                             { icon: Phone, label: "Phone", sub: "Call or text me", value: "+63 961 597 9076", href: "tel:+639615979076" },
@@ -327,24 +327,24 @@ const PortfolioContent = () => {
                         ))}
                     </div>
 
-                    <div className="contact-footer-cta bg-white/40 backdrop-blur-md p-16 rounded-3xl border border-white/30 text-center max-w-4xl mx-auto">
-                        <h3 className="text-3xl font-bold mb-6 text-[var(--primary-color)]">Ready to Get Started?</h3>
-                        <p className="text-gray-600 text-lg mb-10 leading-relaxed">
+                    <div className="contact-footer-cta bg-white/40 backdrop-blur-md p-8 sm:p-16 rounded-2xl sm:rounded-3xl border border-white/30 text-center max-w-4xl mx-auto">
+                        <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-[var(--primary-color)]">Ready to Get Started?</h3>
+                        <p className="text-gray-600 text-base sm:text-lg mb-8 sm:mb-10 leading-relaxed">
                             I'm always interested in discussing new opportunities and projects. Whether you need technical drafting, 3D visualization, or architectural design consultation, I'd love to hear about your challenges.
                         </p>
-                        <a href="mailto:ardiente.jamierose@gmail.com" className="btn-touch inline-flex items-center gap-3 bg-[var(--primary-color)] text-white px-10 py-4 rounded-xl font-bold hover:bg-[var(--accent-color)] hover:-translate-y-1 transition-all shadow-lg shadow-orange-500/10">
+                        <a href="mailto:ardiente.jamierose@gmail.com" className="btn-touch inline-flex items-center gap-3 bg-[var(--primary-color)] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-xl font-bold hover:bg-[var(--accent-color)] hover:-translate-y-1 transition-all shadow-lg shadow-orange-500/10 text-sm sm:text-base">
                             <Mail size={20} /> Get In Touch
                         </a>
                     </div>
                 </div>
             </section>
 
-            <footer className="py-16 border-t border-gray-100 bg-white">
-                <div className="container flex flex-col md:flex-row justify-between items-center gap-8">
-                    <p className="text-gray-500">© 2026 Jamie Rose P. Ardiente. All rights reserved.</p>
-                    <div className="social-links flex gap-8">
-                        <a href="https://www.linkedin.com/in/jamie-ardiente/" target="_blank" className="text-[var(--primary-color)] font-bold hover:text-[var(--accent-color)]">LinkedIn</a>
-                        <a href="https://heyzine.com/flip-book/05e9a6b374.html" target="_blank" className="text-[var(--primary-color)] font-bold hover:text-[var(--accent-color)]">Magazine Portfolio</a>
+            <footer className="py-12 sm:py-16 border-t border-gray-100 bg-white">
+                <div className="container flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8">
+                    <p className="text-gray-500 text-sm sm:text-base text-center md:text-left">© 2026 Jamie Rose P. Ardiente. All rights reserved.</p>
+                    <div className="social-links flex flex-wrap justify-center gap-6 sm:gap-8">
+                        <a href="https://www.linkedin.com/in/jamie-ardiente/" target="_blank" className="text-[var(--primary-color)] text-sm sm:text-base font-bold hover:text-[var(--accent-color)]">LinkedIn</a>
+                        <a href="https://heyzine.com/flip-book/05e9a6b374.html" target="_blank" className="text-[var(--primary-color)] text-sm sm:text-base font-bold hover:text-[var(--accent-color)]">Magazine Portfolio</a>
                     </div>
                 </div>
             </footer>
