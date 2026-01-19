@@ -344,7 +344,7 @@ const PortfolioContent = () => {
                     <p className="text-gray-500">© 2026 Jamie Rose P. Ardiente. All rights reserved.</p>
                     <div className="social-links flex gap-8">
                         <a href="https://www.linkedin.com/in/jamie-ardiente/" target="_blank" className="text-[var(--primary-color)] font-bold hover:text-[var(--accent-color)]">LinkedIn</a>
-                        <a href="https://jamierose.onrender.com/" target="_blank" className="text-[var(--primary-color)] font-bold hover:text-[var(--accent-color)]">Magazine Portfolio</a>
+                        <a href="https://heyzine.com/flip-book/05e9a6b374.html" target="_blank" className="text-[var(--primary-color)] font-bold hover:text-[var(--accent-color)]">Magazine Portfolio</a>
                     </div>
                 </div>
             </footer>
