@@ -1,7 +1,13 @@
 node_modules/
 dist/
+.next/
+out/
 .DS_Store
 *.local
 .env
 .npm
 .vscode/
+
+# Source Assets (converted versions are in public/)
+BG-KEY-FRAMES/
+WITH-WATERMARKS/

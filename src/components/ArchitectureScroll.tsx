@@ -10,7 +10,7 @@ const ArchitectureScroll = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [loadingProgress, setLoadingProgress] = useState(0);
 
-    const frameCount = 36;
+    const frameCount = 54;
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start start", "end end"],
@@ -32,7 +32,7 @@ const ArchitectureScroll = () => {
             const loadImage = (index: number) => {
                 return new Promise((resolve) => {
                     const img = new Image();
-                    img.src = `/arki-sequence/arki-sequence (${index}).jpg`;
+                    img.src = `/hero-sequence/frame-${index}.webp`;
                     img.onload = () => {
                         loadedCount++;
                         setLoadingProgress(Math.floor((loadedCount / frameCount) * 100));
@@ -122,7 +122,7 @@ const ArchitectureScroll = () => {
 
 
     return (
-        <div ref={containerRef} className="relative h-[400vh] bg-background">
+        <div id="home" ref={containerRef} className="relative h-[400vh] bg-background">
             {/* Loading State */}
             {isLoading && (
                 <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background">
